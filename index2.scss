@@ -1,4 +1,57 @@
 body {
+  justify-content: center;
+  .game {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1000px;
+    .cont-champ-bataille {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
 
-    
+      .bateau {
+        position: relative;
+        width: 20%;
+
+        img {
+          width: 100%;
+        }
+      }
+      .champs-bataille {
+      }
+    }
+    .cont-equipe {
+      color: white;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background-image: url("assets/dark-wood.png");
+      background-color: rgb(195, 116, 14);
+
+      text-align: center;
+
+      .personnages {
+        position: relative;
+        display: flex;
+        justify-content: center;
+
+        .fiche-personnage {
+          text-align: center;
+          border-radius: 10px;
+          padding: 10px;
+          width: 20%;
+          img {
+            border-radius: 10px;
+            width: 100%;
+          }
+          h2 {
+            font-size: 1.2rem; /* Taille du texte adaptative */
+          }
+        }
+      }
+    }
+  }
 }
