@@ -1,9 +1,12 @@
+body {
+  justify-content: center;
+}
 body .game {
   position: relative;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   width: 100%;
+  max-width: 1000px;
 }
 body .game .cont-champ-bataille {
   position: relative;
