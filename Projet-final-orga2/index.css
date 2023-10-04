@@ -1,52 +1,136 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  background-image: url("assets/header.webp");
+  background-size: cover;
+  background-position: center;
+
+  font-size: 2em;
+  margin-top: 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: bisque;
+  padding-left: 20px;
+  transition: font-size 0.5s ease;
+}
+@media (min-width: 400px) {
+  .header {
+    font-size: 2.5em;
+    transition: font-size 0.5s ease;
+  }
+
+}
+@media (min-width: 730px) {
+
+  .return {
+    display: None;
+  }
+}
+.align {
+  padding-left: 700px;
+}
+
+@keyframes liftUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+.title .lettre {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+  animation: liftUp 1s infinite alternate;
+  transform-origin: center bottom;
+  color: rgb(29, 29, 146);
+}
+
+.title .lettre:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.title .lettre:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.title .lettre:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.title .lettre:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.title .lettre:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+.lettre:nth-child(6) {
+  transition-delay: 0.6s;
+}
+
+.lettre:nth-child(7) {
+  transition-delay: 0.7s;
+}
+p {
+  font-size: 1.2em;
+  margin-bottom: 10px;
 }
 
 h2 {
-    text-align: center;
-    color: #333;
+  text-align: center;
+  color: #333;
 }
 
 form {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
-    display: block;
-    margin-bottom: 8px;
-    color: #333;
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
 }
 
-select, input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+select,
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 input[type="radio"] {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 input[type="submit"] {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+  background-color: #45a049;
 }
