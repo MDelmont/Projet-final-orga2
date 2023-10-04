@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+        <nav></nav>
+    </header>
+    
+
+    <main>
+        <h1 class="title"></h1>
+        <p class="description"></p>
+
+        <form action="/submit" method="post">
+          
+          <label for="pseudo">Votre pseudo :</label>
+          <input type="text" id="pseudo" name="pseudo" required>
+  
+          <br>
+  
+          <label for="arme">Votre arme :</label>
+          <input type="text" id="arme" name="arme" required>
+  
+          <br>
+
+          <label for="personnage">Par quel perso voudrais-tu être accompagné :</label>
+          <select id="personnage" name="personnage">
+              <option value="eren">Luffy</option>
+              <option value="mikasa">Nami</option>
+              <option value="levi">Zoro</option>
+              <option value="levi">Garp</option>
+              <option value="levi">Akainu</option>
+              <option value="levi">Smoker</option>
+          </select>
+  
+          <br>
+  
+          <label>Choisis ton camp :</label>
+          <input type="radio" id="camp-1" name="camp" value="humain" checked>
+          <label for="camp-1">Pirate</label>
+          <input type="radio" id="camp-2" name="camp" value="titan">
+          <label for="camp-2">Marine</label>
+  
+          <br>
+          <input type="submit" value="Envoyer">
+      </form>
+
+        <section class="game"></section>
+
+
+    </main>
+
+    <footer>
+        <p>
+            Tous droit reserver
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
