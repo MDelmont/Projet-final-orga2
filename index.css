@@ -4,19 +4,92 @@ body {
     margin: 0;
     padding: 0;
 }
+main {
+    display:flex;
+    flex-direction: column;
+  }
 
+  header {
+    position: relative;
+  }
+  
+  h1 {
+    width: 100%;
+    background-image: url('assets/header.webp'); 
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 250px; 
+    font-size: 2.5em; 
+  }
+  .align {
+    
+    padding-left: 700px;
+  }
+
+  @keyframes liftUp {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-30px);
+    }
+  }
+  
+  .lettre {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    animation: liftUp 1s infinite alternate;
+    transform-origin: center bottom;
+    
+  }
+  
+  .lettre:nth-child(1) {
+    transition-delay: 0.1s;
+  }
+  
+  .lettre:nth-child(2) {
+    transition-delay: 0.2s;
+  }
+  
+  .lettre:nth-child(3) {
+    transition-delay: 0.3s;
+  }
+  
+  .lettre:nth-child(4) {
+    transition-delay: 0.4s;
+  }
+  
+  .lettre:nth-child(5) {
+    transition-delay: 0.5s;
+  }
+  
+  .lettre:nth-child(6) {
+    transition-delay: 0.6s;
+  }
+  
+  .lettre:nth-child(7) {
+    transition-delay: 0.7s;
+  }
+  p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }  
+  
 h2 {
     text-align: center;
     color: #333;
 }
 
 form {
-    max-width: 400px;
+    font-size: 1.5em;
+    width: 80%;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
 }
 
 label {
@@ -26,6 +99,7 @@ label {
 }
 
 select, input {
+    font-size: 1.2em;
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
