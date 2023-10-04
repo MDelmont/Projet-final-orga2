@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="index2.css" />
+
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+
+    <main>
+      <h1 class="title">Bataille naval dans one piece</h1>
+      <p class="description"></p>
+
+      <form action="/submit" method="post">
+          
+          <label for="pseudo">Votre pseudo :</label>
+          <input type="text" id="pseudo" name="pseudo" required>
+  
+          <br>
+  
+          <label for="arme">Votre arme :</label>
+          <input type="text" id="arme" name="arme" required>
+  
+          <br>
+
+          <label for="personnage">Par quel perso voudrais-tu être accompagné :</label>
+          <select id="personnage" name="personnage">
+              <option value="eren">Luffy</option>
+              <option value="mikasa">Nami</option>
+              <option value="levi">Zoro</option>
+              <option value="levi">Garp</option>
+              <option value="levi">Akainu</option>
+              <option value="levi">Smoker</option>
+          </select>
+  
+          <br>
+  
+          <label>Choisis ton camp :</label>
+          <input type="radio" id="camp-1" name="camp" value="humain" checked>
+          <label for="camp-1">Pirate</label>
+          <input type="radio" id="camp-2" name="camp" value="titan">
+          <label for="camp-2">Marine</label>
+  
+          <br>
+          <input type="submit" value="Envoyer">
+      </form>
+
+      <section class="game run">
+        
+        <div class="cont-equipe">
+          <h2 class="name-equipe">Pirate</h2>
+          <div class="personnages">
+            <div class="fiche-personnage"> 
+              <h2>Luffy</h2>
+              <img src="assets\luffy.webp" alt="Image du Personnage" />
+            </div>
+            <div class="fiche-personnage">
+              <h2>Nami</h2>
+              <img src="assets\nami.webp" alt="Image du Personnage" />
+            </div>
+            <div class="fiche-personnage">
+              <h2>Zoro</h2>
+              <img src="assets\zoro.webp" alt="Image du Personnage" />
+            </div> 
+          </div>
+        </div>
+
+        <div class="cont-champ-bataille">
+          <div class="bateau">
+            <img src="assets/pirate.webp" alt="" class="bateau-img"></img>
+            <div class="explosion un" id="explosion"></div>
+              <div class="explosion deux" id="explosion"></div>
+              <div class="explosion trois" id="explosion"></div>
+              <div class="explosion quatre" id="explosion"></div>
+              <div class="explosion cinq" id="explosion"></div>
+          </div>
+          
+            
+            <div class="champ-bataille">
+              <img src="assets/mer.webp" alt="" class="mer-img"></img>
+              <div class="boulet droit un" id="boulet"></div>
+              <div class="boulet droit deux" id="boulet"></div>
+              <div class="boulet droit trois" id="boulet"></div>
+
+              <div class="boulet gauche un" id="boulet"></div>
+              <div class="boulet gauche deux" id="boulet"></div>
+              <div class="boulet gauche trois" id="boulet"></div>
+              
+              
+      
+
+              
+            </div>
+
+            <div class="bateau">
+              <img src="assets/marine.webp" alt="" class="bateau-img"></img>
+              <div class="explosion un" id="explosion"></div>
+              <div class="explosion deux" id="explosion"></div>
+              <div class="explosion trois" id="explosion"></div>
+              <div class="explosion quatre" id="explosion"></div>
+              <div class="explosion cinq" id="explosion"></div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="cont-equipe">
+          <h2 class="name-equipe">Marine</h2>
+          <div class="personnages">
+            <div class="fiche-personnage">
+              <h2>Akainu</h2>
+              <img src="assets\Akainu.webp" alt="Image du Personnage" />
+            </div>
+            <div class="fiche-personnage">
+              <h2>Smoker</h2>
+              <img src="assets\smoker.webp" alt="Image du Personnage" />
+            </div>
+            <div class="fiche-personnage">
+              <h2>Garp</h2>
+              <img src="assets\garp.webp" alt="Image du Personnage" />
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Tous droit reservés</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
