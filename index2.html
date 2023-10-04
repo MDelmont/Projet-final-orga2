@@ -31,49 +31,49 @@
 
           <label for="personnage">Par quel perso voudrais-tu être accompagné :</label>
           <select id="personnage" name="personnage">
-              <option value="eren">Luffy</option>
-              <option value="mikasa">Nami</option>
-              <option value="levi">Zoro</option>
-              <option value="levi">Garp</option>
-              <option value="levi">Akainu</option>
-              <option value="levi">Smoker</option>
+              <option value="Luffy">Luffy</option>
+              <option value="Nami">Nami</option>
+              <option value="Zoro">Zoro</option>
+              <option value="Garp">Garp</option>
+              <option value="Akainu">Akainu</option>
+              <option value="Smoker">Smoker</option>
           </select>
   
           <br>
   
           <label>Choisis ton camp :</label>
-          <input type="radio" id="camp-1" name="camp" value="humain" checked>
-          <label for="camp-1">Pirate</label>
-          <input type="radio" id="camp-2" name="camp" value="titan">
-          <label for="camp-2">Marine</label>
+          <input type="radio" id="Pirate" name="camp" value="Pirate" checked>
+          <label for="Pirate">Pirate</label>
+          <input type="radio" id="Marine" name="camp" value="Marine">
+          <label for="Marine">Marine</label>
   
           <br>
           <input type="submit" value="Envoyer">
       </form>
 
-      <section class="game run">
+      <section class="game">
         
         <div class="cont-equipe">
           <h2 class="name-equipe">Pirate</h2>
           <div class="personnages">
             <div class="fiche-personnage"> 
               <h2>Luffy</h2>
-              <img src="assets\luffy.jpg" alt="Image du Personnage" />
+              <img src="assets\luffy.webp" alt="Image du Personnage" />
             </div>
             <div class="fiche-personnage">
               <h2>Nami</h2>
-              <img src="assets\nami.jpg" alt="Image du Personnage" />
+              <img src="assets\nami.webp" alt="Image du Personnage" />
             </div>
             <div class="fiche-personnage">
               <h2>Zoro</h2>
-              <img src="assets\zoro.jpg" alt="Image du Personnage" />
+              <img src="assets\zoro.webp" alt="Image du Personnage" />
             </div> 
           </div>
         </div>
 
         <div class="cont-champ-bataille">
           <div class="bateau">
-            <img src="assets/pirate.jpg" alt="" class="bateau-img"></img>
+            <img src="assets/pirate.webp" alt="" class="bateau-img"></img>
             <div class="explosion un" id="explosion"></div>
               <div class="explosion deux" id="explosion"></div>
               <div class="explosion trois" id="explosion"></div>
@@ -83,7 +83,7 @@
           
             
             <div class="champ-bataille">
-              <img src="assets/mer.jpg" alt="" class="mer-img"></img>
+              <img src="assets/mer.webp" alt="" class="mer-img"></img>
               <div class="boulet droit un" id="boulet"></div>
               <div class="boulet droit deux" id="boulet"></div>
               <div class="boulet droit trois" id="boulet"></div>
@@ -91,15 +91,27 @@
               <div class="boulet gauche un" id="boulet"></div>
               <div class="boulet gauche deux" id="boulet"></div>
               <div class="boulet gauche trois" id="boulet"></div>
-              
-              
-      
 
+              <div class="end-game">
+                
+                <h2 id="resulat-game">La Marine à gagné</h2>
+
+                <button class="btn-class-name" id="reset">
+                  <span class="back"></span>
+                  <span class="front"><p>reset</p></span>
+                </button>
+              </div>
+              <div class="starts-game">
               
+                <button class="btn-class-name" id="start">
+                  <span class="back"></span>
+                  <span class="front"><p>Start</p></span>
+                </button>
+              </div>
             </div>
 
             <div class="bateau">
-              <img src="assets/marine.jpg" alt="" class="bateau-img"></img>
+              <img src="assets/marine.webp" alt="" class="bateau-img"></img>
               <div class="explosion un" id="explosion"></div>
               <div class="explosion deux" id="explosion"></div>
               <div class="explosion trois" id="explosion"></div>
@@ -116,7 +128,7 @@
           <div class="personnages">
             <div class="fiche-personnage">
               <h2>Akainu</h2>
-              <img src="assets\Akainu.jpg" alt="Image du Personnage" />
+              <img src="assets\Akainu.webp" alt="Image du Personnage" />
             </div>
             <div class="fiche-personnage">
               <h2>Smoker</h2>
