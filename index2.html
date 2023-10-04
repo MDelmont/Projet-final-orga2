@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <title>Document</title>
 
+    <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="index2.css" />
+
   </head>
   <body>
     <header>
@@ -12,17 +14,49 @@
     </header>
 
     <main>
-      <h1 class="title"></h1>
+      <h1 class="title">Bataille naval dans one piece</h1>
       <p class="description"></p>
 
-      <form action=""></form>
+      <form action="/submit" method="post">
+          
+          <label for="pseudo">Votre pseudo :</label>
+          <input type="text" id="pseudo" name="pseudo" required>
+  
+          <br>
+  
+          <label for="arme">Votre arme :</label>
+          <input type="text" id="arme" name="arme" required>
+  
+          <br>
 
-      <section class="game">
+          <label for="personnage">Par quel perso voudrais-tu être accompagné :</label>
+          <select id="personnage" name="personnage">
+              <option value="eren">Luffy</option>
+              <option value="mikasa">Nami</option>
+              <option value="levi">Zoro</option>
+              <option value="levi">Garp</option>
+              <option value="levi">Akainu</option>
+              <option value="levi">Smoker</option>
+          </select>
+  
+          <br>
+  
+          <label>Choisis ton camp :</label>
+          <input type="radio" id="camp-1" name="camp" value="humain" checked>
+          <label for="camp-1">Pirate</label>
+          <input type="radio" id="camp-2" name="camp" value="titan">
+          <label for="camp-2">Marine</label>
+  
+          <br>
+          <input type="submit" value="Envoyer">
+      </form>
+
+      <section class="game run">
         
         <div class="cont-equipe">
           <h2 class="name-equipe">Pirate</h2>
           <div class="personnages">
-            <div class="fiche-personnage">
+            <div class="fiche-personnage"> 
               <h2>Luffy</h2>
               <img src="assets\luffy.jpg" alt="Image du Personnage" />
             </div>
@@ -33,7 +67,7 @@
             <div class="fiche-personnage">
               <h2>Zoro</h2>
               <img src="assets\zoro.jpg" alt="Image du Personnage" />
-            </div>
+            </div> 
           </div>
         </div>
 
