@@ -10,6 +10,9 @@ body .game {
   width: 100%;
   max-width: 1000px;
   margin: 20px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
 }
 body .game .cont-champ-bataille {
   position: relative;
@@ -29,7 +32,7 @@ body .game .cont-champ-bataille .champ-bataille .starts-game {
   height: 100%;
   top: 0%;
   right: 0%;
-  background-image: url("assets/dark-wood.png");
+  background-image: url("assets/dark-wood.webp");
   background-color: rgb(195, 116, 14);
   display: flex;
   justify-content: center;
@@ -61,7 +64,7 @@ body .game .cont-champ-bataille .champ-bataille .end-game {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url("assets/dark-wood.png");
+  background-image: url("assets/dark-wood.webp");
   background-color: rgb(195, 116, 14);
   transform: translateX(0);
   transition: transform 2s;
@@ -70,6 +73,7 @@ body .game .cont-champ-bataille .champ-bataille .end-game h3 {
   color: bisque;
   margin-top: 2px;
   margin-bottom: 20px;
+  font-size: 1rem;
 }
 body .game .cont-champ-bataille .champ-bataille .end-game .btn-class-name {
   --primary2: 10, 208, 10;
@@ -166,7 +170,7 @@ body .game .cont-champ-bataille .bateau .explosion {
   left: 0;
   width: 20%;
   height: 20%;
-  background-image: url("assets/explosion.png");
+  background-image: url("assets/explosion.webp");
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
@@ -226,8 +230,9 @@ body .game .cont-equipe {
   position: relative;
   display: flex;
   flex-direction: column;
-  background-image: url("assets/dark-wood.png");
+  background-image: url("assets/dark-wood.webp");
   background-color: rgb(195, 116, 14);
+  min-height: 250px;
   text-align: center;
 }
 body .game .cont-equipe h2 {
@@ -288,8 +293,8 @@ body .game.finish .cont-champ-bataille .bateau .explosion {
 .btn-class-name {
   --primary: 255, 90, 120;
   --secondary: 150, 50, 60;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -299,6 +304,7 @@ body .game.finish .cont-champ-bataille .bateau .explosion {
   border-radius: 100%;
   position: relative;
   transition: 0.3s;
+  margin: 20px;
 }
 .btn-class-name .front {
   background: linear-gradient(0deg, rgba(var(--primary), 0.6) 20%, rgba(var(--primary)) 50%);
@@ -313,12 +319,15 @@ body .game.finish .cont-champ-bataille .bateau .explosion {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   font-family: inherit;
   transform: translateY(-15%);
   transition: 0.15s;
   color: rgb(var(--secondary));
+}
+.btn-class-name .front p {
+  margin: 0;
 }
 .btn-class-name .back {
   background: rgb(var(--secondary));
@@ -335,10 +344,78 @@ body .game.finish .cont-champ-bataille .bateau .explosion {
   box-shadow: 0 0;
 }
 
+main {
+  background-image: url("assets/background3.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+main form {
+  background-image: url("assets/dark-wood.webp");
+  background-color: rgb(195, 116, 14);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+main form label,
+main form h3,
+main form h2 {
+  color: bisque;
+}
+main form .camp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main form .button {
+  scale: 0.9;
+  cursor: pointer;
+  position: relative;
+  padding: 10px 24px;
+  font-size: 18px;
+  color: bisque;
+  border: 2px solid bisque;
+  border-radius: 34px;
+  background-color: transparent;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  overflow: hidden;
+}
+main form .button:hover {
+  color: rgb(105, 72, 2);
+  scale: 1;
+  box-shadow: 0 0px 20px rgb(105, 72, 2);
+  background-color: bisque;
+}
+main form .button:active {
+  scale: 0.9;
+}
+main .intro {
+  background-image: url("assets/dark-wood.webp");
+  background-color: rgb(195, 116, 14);
+  margin: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  color: bisque;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+main .intro h2 {
+  color: bisque;
+}
+
+footer {
+  background-image: url("assets/dark-wood.webp");
+  background-color: rgb(195, 116, 14);
+  margin: 0;
+  padding: 10px;
+  color: bisque;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+}
+
 @media (min-width: 768px) {
   .btn-class-name {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
+  }
+  .resulat-game {
+    font-size: 1.5em;
   }
 }
 
