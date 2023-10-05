@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bataille naval</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.webp">
+
+    <meta charset="UTF-8">
+    <meta name="description" content="Ceci est une page qui permet de jouer à une bataille naval entre deux equipage de One piece.">
+    <meta name="author" content="Matthieu et Théophile">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="index.css">
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="title" aria-label="On the cruise">On the 
+        <br class="return">
+        <span class="letter c">c</span>
+        <span class="letter r">r</span>
+        <span class="letter u">u</span>
+        <span class="letter i">i</span>
+        <span class="letter s">s</span>
+        <span class="letter e">e</span></h1>
+    </header>
+
+    <main>
+          <article class="intro">
+            <h2>Prêt pour une petite aventure ?</h2>
+            <p aria-label="Bienvenue"> Bienvenue !</p>
+          <p> Découvrez l'épopée maritime captivante de notre jeu,
+            plongé dans l'univers épique de One Piece.  </p>
+            <p>Embarquez pour une aventure palpitante où les Pirates affrontent la Marine dans des combats spectaculaires. Choisissez votre camp avec soin, sélectionnez votre équipage parmi des personnages emblématiques tels que Luffy, Nami, Zoro, Akainu et bien d'autres,
+              et engagez-vous dans des batailles stratégiques pour la suprématie sur les océans. 
+            </p>
+            <p>En garde, moussaillon !</p>
+          </article>
+
+      <form action="/submit" method="post">
+          <h2>Création personnage</h2>
+          
+          <label for="pseudo">Votre pseudo :</label>
+          <input type="text" id="pseudo" name="pseudo" required>
+  
+          <br>
+  
+          <label for="arme">Votre arme :</label>
+          <input type="text" id="arme" name="arme" required>
+  
+          <br>
+
+          <label for="personnage">Par quel perso voudrais-tu être accompagné :</label>
+          <select id="personnage" name="personnage">
+              <option value="Luffy">Luffy</option>
+              <option value="Nami">Nami</option>
+              <option value="Zoro">Zoro</option>
+              <option value="Garp">Garp</option>
+              <option value="Akainu">Akainu</option>
+              <option value="Smoker">Smoker</option>
+          </select>
+  
+          <br>
+  
+          <h3>Choisis le camp</h3>
+          <div class="camp">
+            <label for="camp-1">Pirate</label>
+            <input type="radio" id="Pirate" name="camp" value="Pirate" checked>
+            <label for="camp-2">Marine</label>
+            <input type="radio" id="Marine" name="camp" value="Marine">
+            
+          </div>
+  
+          <br>
+          <input type="submit" value="Envoyer" class = 'button'>
+      </form>
+
+      <section class="game" id="game">
+        
+        <div class="cont-equipe">
+          <h2 class="name-equipe">Pirate</h2>
+          <div class="personnages Pirate">
+           
+          </div>
+        </div>
+
+        <div class="cont-champ-bataille">
+          <div class="bateau">
+            <picture>
+              <source srcset="assets/pirate.webp" type="pirate/webp">
+              <source srcset="assets/pirate.jpg" type="pirate/jpeg">
+              <img src="assets/pirate.webp" alt="Description de l'image"  class="bateau-img">
+            </picture>
+            
+            <div class="explosion un" id="explosion"></div>
+              <div class="explosion deux" id="explosion"></div>
+              <div class="explosion trois" id="explosion"></div>
+              <div class="explosion quatre" id="explosion"></div>
+              <div class="explosion cinq" id="explosion"></div>
+          </div>
+          
+            
+            <div class="champ-bataille">
+              <img src="assets/mer.webp" alt="" class="mer-img">
+              <div class="boulet droit un" id="boulet"></div>
+              <div class="boulet droit deux" id="boulet"></div>
+              <div class="boulet droit trois" id="boulet"></div>
+
+              <div class="boulet gauche un" id="boulet"></div>
+              <div class="boulet gauche deux" id="boulet"></div>
+              <div class="boulet gauche trois" id="boulet"></div>
+
+              <div class="end-game">
+                
+                <h3 id="resulat-game">La Marine à gagné</h3>
+
+                <button class="btn-class-name" id="reset">
+                  <span class="back"></span>
+                  <span class="front"><p>reset</p></span>
+                </button>
+              </div>
+              <div class="starts-game">
+              
+                <button class="btn-class-name" id="start">
+                  <span class="back"></span>
+                  <span class="front"><p>Start</p></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="bateau">
+
+              <picture>
+                <source srcset="assets/marine.webp" type="marine/webp">
+                <source srcset="assets/marine.jpg" type="marine/jpeg">
+                <img src="assets/marine.webp" alt="Description de l'image"  class="bateau-img">
+              </picture>
+          
+              <div class="explosion un" id="explosion"></div>
+              <div class="explosion deux" id="explosion"></div>
+              <div class="explosion trois" id="explosion"></div>
+              <div class="explosion quatre" id="explosion"></div>
+              <div class="explosion cinq" id="explosion"></div>
+
+            </div>
+          </div>
+        
+        <div class="cont-equipe">
+          <h2 class="name-equipe">Marine</h2>
+          <div class="personnages Marine">
+          
+          </div>
+          
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Tous droit reservés</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
