@@ -540,8 +540,10 @@ footer {
   color: $font_color;
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  font: optional;
   a {
     color: $font_color;
   }
@@ -615,5 +617,8 @@ footer {
     .cont-equipe {
       min-height: 250px;
     }
+  }
+  footer {
+    flex-direction: row;
   }
 }
