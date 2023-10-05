@@ -328,7 +328,8 @@ main .intro h2 {
   flex-direction: column;
   background-image: url("../assets/dark-wood_compress.webp");
   background-color: rgb(195, 116, 14);
-  min-height: 250px;
+  min-height: 200px;
+  transition: min-height 0.5s ease;
   text-align: center;
 }
 .game .cont-equipe h2 {
@@ -525,6 +526,9 @@ footer a {
   .btn-class-name {
     width: 60px;
     height: 60px;
+  }
+  .game .cont-equipe {
+    min-height: 250px;
   }
 }
 

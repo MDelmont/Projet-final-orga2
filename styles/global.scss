@@ -375,8 +375,8 @@ main {
     flex-direction: column;
     background-image: url($wood_img);
     background-color: $bg_color_wood;
-    min-height: 250px;
-
+    min-height: 200px;
+    transition: min-height 0.5s ease;
     text-align: center;
     h2 {
       color: $font_color;
@@ -610,5 +610,10 @@ footer {
   .btn-class-name {
     width: 60px;
     height: 60px;
+  }
+  .game {
+    .cont-equipe {
+      min-height: 250px;
+    }
   }
 }

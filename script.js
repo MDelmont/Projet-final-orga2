@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("form");
 
+
+
+  const form = document.querySelector("form");
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -40,6 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
     personnages.appendChild(newFichePersonnage);
   });
 
+
+
+
+
   const start = document.getElementById("start");
   const reset = document.getElementById("reset");
   const game = document.getElementsByClassName("game")[0];
@@ -56,6 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 5000);
     start.disabled = false;
   });
+  
   reset.addEventListener("click", () => {
     reset.disabled = true;
 
