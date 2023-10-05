@@ -1,0 +1,18 @@
+$wood_img: "../assets/dark-wood.webp";
+$bg_color_wood: rgb(195, 116, 14);
+$font_color: bisque;
+
+main {
+  .intro {
+    background-image: url($wood_img);
+    background-color: $bg_color_wood;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    color: $font_color;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+    h2 {
+      color: $font_color;
+    }
+  }
+}

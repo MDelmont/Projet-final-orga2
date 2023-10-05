@@ -1,0 +1,10 @@
+footer {
+  background-image: url("../assets/dark-wood.webp");
+  background-color: rgb(195, 116, 14);
+  margin: 0;
+  padding: 10px;
+  color: bisque;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/*# sourceMappingURL=footer.css.map */

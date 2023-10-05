@@ -1,0 +1,296 @@
+@charset "UTF-8";
+.game {
+  align-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+.game .cont-champ-bataille {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 120px;
+}
+.game .cont-champ-bataille .champ-bataille {
+  position: relative;
+  overflow: hidden;
+  width: 60%;
+}
+.game .cont-champ-bataille .champ-bataille .starts-game {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  right: 0%;
+  background-image: url("../assets/dark-wood.webp");
+  background-color: rgb(195, 116, 14);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(0);
+  transition: transform 2s;
+}
+.game .cont-champ-bataille .champ-bataille .starts-game .btn-class-name {
+  --primary: 255, 90, 120;
+  --secondary: 150, 50, 60;
+  outline: 10px solid rgb(var(--primary), 0.5);
+}
+.game .cont-champ-bataille .champ-bataille .starts-game .btn-class-name .front {
+  background: linear-gradient(0deg, rgba(var(--primary), 0.6) 20%, rgba(var(--primary)) 50%);
+  box-shadow: 0 0.5em 1em -0.2em rgba(var(--secondary), 0.5);
+  border: 1px solid rgb(var(--secondary));
+  color: rgb(var(--secondary));
+}
+.game .cont-champ-bataille .champ-bataille .starts-game .btn-class-name .back {
+  background: rgb(var(--secondary));
+}
+.game .cont-champ-bataille .champ-bataille .end-game {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../assets/dark-wood.webp");
+  background-color: rgb(195, 116, 14);
+  transform: translateX(0);
+  transition: transform 2s;
+}
+.game .cont-champ-bataille .champ-bataille .end-game h3 {
+  color: bisque;
+  margin-top: 2px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+.game .cont-champ-bataille .champ-bataille .end-game .btn-class-name {
+  --primary2: 10, 208, 10;
+  --secondary2: 2, 84, 2;
+  outline: 10px solid rgb(var(--primary2), 0.5);
+}
+.game .cont-champ-bataille .champ-bataille .end-game .btn-class-name .front {
+  background: linear-gradient(0deg, rgba(var(--primary2), 0.6) 20%, rgba(var(--primary2)) 50%);
+  box-shadow: 0 0.5em 1em -0.2em rgba(var(--secondary2), 0.5);
+  border: 1px solid rgb(var(--secondary2));
+  color: rgb(var(--secondary2));
+}
+.game .cont-champ-bataille .champ-bataille .end-game .btn-class-name .back {
+  background: rgb(var(--secondary2));
+}
+.game .cont-champ-bataille .champ-bataille img {
+  width: 100%;
+  height: 100%;
+}
+.game .cont-champ-bataille .champ-bataille .boulet {
+  display: none;
+  width: 20%;
+  height: 20%;
+  background: url("../assets/ball.png") no-repeat center/contain;
+  position: absolute;
+  top: 40%; /* Ajustez la position verticale selon vos besoins */
+  animation-duration: 1s; /* Ajustez la durée de l'animation selon vos besoins */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.game .cont-champ-bataille .champ-bataille .droit {
+  right: -20%;
+  animation-name: bouletDroit;
+}
+.game .cont-champ-bataille .champ-bataille .droit.un {
+  animation-delay: 0.5s;
+}
+.game .cont-champ-bataille .champ-bataille .droit.deux {
+  animation-delay: 1s;
+}
+.game .cont-champ-bataille .champ-bataille .droit.trois {
+  animation-delay: 0.8s;
+}
+.game .cont-champ-bataille .champ-bataille .gauche {
+  left: -20%;
+  animation-name: bouletGauche;
+}
+.game .cont-champ-bataille .champ-bataille .gauche.un {
+  animation-delay: 1s;
+}
+.game .cont-champ-bataille .champ-bataille .gauche.deux {
+  animation-delay: 0.6s;
+}
+.game .cont-champ-bataille .champ-bataille .gauche.trois {
+  animation-delay: 0.3s;
+}
+.game .cont-champ-bataille .champ-bataille .un {
+  animation-duration: 0.8s;
+}
+.game .cont-champ-bataille .champ-bataille .deux {
+  animation-duration: 0.6s;
+  top: 30%;
+  width: 15%;
+  height: 15%;
+}
+.game .cont-champ-bataille .champ-bataille .trois {
+  animation-duration: 0.7s;
+  top: 70%;
+  width: 25%;
+  height: 25%;
+}
+@keyframes bouletDroit {
+  to {
+    right: 100%;
+  }
+}
+@keyframes bouletGauche {
+  to {
+    left: 100%; /* Le boulet se déplace vers la gauche */
+  }
+}
+.game .cont-champ-bataille .bateau {
+  position: relative;
+  width: 20%;
+}
+.game .cont-champ-bataille .bateau img {
+  width: 100%;
+  height: 100%;
+}
+.game .cont-champ-bataille .bateau .explosion {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 20%;
+  background-image: url("../assets/explosion.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: explosionAnimation 0.5s ease-in-out infinite alternate;
+}
+.game .cont-champ-bataille .bateau .explosion.un {
+  width: 15%;
+  left: 60%;
+  top: 60%;
+  animation-duration: 0.3s;
+  animation-delay: 1s;
+  transform: rotate(90deg);
+}
+.game .cont-champ-bataille .bateau .explosion.deux {
+  width: 30%;
+  left: 10%;
+  top: 65%;
+  animation-duration: 0.6s;
+  animation-delay: 2s;
+  transform: rotate(180deg);
+}
+.game .cont-champ-bataille .bateau .explosion.trois {
+  width: 18%;
+  left: 18%;
+  top: 30%;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  transform: rotate(-20deg);
+}
+.game .cont-champ-bataille .bateau .explosion.quatre {
+  left: 5%;
+  top: 5%;
+  animation-duration: 0.8s;
+  animation-delay: 0.8s;
+  transform: rotate(-45deg);
+}
+.game .cont-champ-bataille .bateau .explosion.cinq {
+  left: 70%;
+  top: 5%;
+  animation-duration: 0.9s;
+  animation-delay: 0.1s;
+  transform: rotate(45deg);
+}
+@keyframes explosionAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.game .cont-equipe {
+  color: bisque;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../assets/dark-wood.webp");
+  background-color: rgb(195, 116, 14);
+  min-height: 250px;
+  text-align: center;
+}
+.game .cont-equipe h2 {
+  color: bisque;
+}
+.game .cont-equipe .personnages {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.game .cont-equipe .personnages .fiche-personnage {
+  text-align: center;
+  border-radius: 10px;
+  padding: 10px;
+  width: 15%;
+}
+.game .cont-equipe .personnages .fiche-personnage img {
+  border-radius: 10px;
+  width: 100%;
+}
+.game .cont-equipe .personnages .fiche-personnage h2 {
+  font-size: 1.2rem; /* Taille du texte adaptative */
+  color: bisque;
+}
+.game.run .cont-champ-bataille .champ-bataille .boulet {
+  display: block;
+}
+.game.run .cont-champ-bataille .champ-bataille .starts-game {
+  transform: translateX(-100%);
+  transition: transform 2s;
+}
+.game.run .cont-champ-bataille .champ-bataille .end-game {
+  transform: translateX(100%);
+  transition: transform 2s;
+}
+.game.run .cont-champ-bataille .champ-bataille .end-game * {
+  display: None;
+}
+.game.run .cont-champ-bataille .bateau .explosion {
+  display: block;
+}
+.game.finish .cont-champ-bataille .champ-bataille .boulet {
+  display: block;
+}
+.game.finish .cont-champ-bataille .champ-bataille .starts-game {
+  transform: translateX(-100%);
+  transition: transform 2s;
+}
+.game.finish .cont-champ-bataille .champ-bataille .end-game {
+  transform: translateX(0%);
+  transition: transform 2s;
+}
+.game.finish .cont-champ-bataille .bateau .explosion {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .resulat-game {
+    font-size: 1.5em;
+  }
+}
+
+/*# sourceMappingURL=game.css.map */

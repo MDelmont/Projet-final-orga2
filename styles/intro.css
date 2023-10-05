@@ -1,0 +1,14 @@
+main .intro {
+  background-image: url("../assets/dark-wood.webp");
+  background-color: rgb(195, 116, 14);
+  margin: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  color: bisque;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
+}
+main .intro h2 {
+  color: bisque;
+}
+
+/*# sourceMappingURL=intro.css.map */

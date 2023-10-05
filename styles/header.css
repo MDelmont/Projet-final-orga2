@@ -1,0 +1,68 @@
+.header {
+  position: relative;
+  width: 100%;
+  background-image: url("../assets/header.webp");
+  background-size: cover;
+  background-position: center;
+  font-size: 2em;
+  margin-top: 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: bisque;
+  transition: font-size 0.5s ease;
+}
+.header .title {
+  padding-left: 20px;
+}
+.header .title .lettre {
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+  animation: liftUp 1s infinite alternate;
+  transform-origin: center bottom;
+  color: rgb(10, 11, 64);
+}
+.header .title .lettre:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.header .title .lettre:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.header .title .lettre:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.header .title .lettre:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.header .title .lettre:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.header .title .lettre:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.header .title .lettre:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+@keyframes liftUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+@media (min-width: 400px) {
+  .header {
+    font-size: 2.5em;
+    transition: font-size 0.5s ease;
+  }
+}
+@media (min-width: 730px) {
+  .return {
+    display: None;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */
