@@ -24,6 +24,8 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 20px;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 //   intro
@@ -537,6 +539,12 @@ footer {
   padding: 10px;
   color: $font_color;
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  a {
+    color: $font_color;
+  }
 }
 
 // button

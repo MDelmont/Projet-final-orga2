@@ -3,6 +3,8 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 20px;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 /*# sourceMappingURL=main.css.map */

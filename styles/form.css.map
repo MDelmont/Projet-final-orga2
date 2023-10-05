@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["form.scss"],"names":[],"mappings":"AAIE;EACE;EACA,kBALY;EAMZ;EACA;EACA;EACA;EACA;EAEA;;AACA;AAAA;AAAA;EAGE,OAfO;;AAkBT;EACE;EACA;;AAEF;EACE;EACA;;AAEF;AAAA;EAEE;EACA;EACA;;AAGF;EACE;;AAGF;EACE;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA;EACA;EACA,OAjDO;EAkDP;EACA;EACA;EACA;EACA;EACA;;AAGF;EACE;EACA;EACA;EACA,kBA9DO;;AAiET;EACE","file":"form.css"}
+{"version":3,"sourceRoot":"","sources":["footer.scss"],"names":[],"mappings":"AAIA;EACE;EACA,kBALc;EAMd;EACA;EACA,OAPW;EAQX;EACA;EACA;EACA","file":"form.css"}

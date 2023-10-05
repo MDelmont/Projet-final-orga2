@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bataille naval</title>
+    <title aria-label="Bataille naval">Bataille naval</title>
     <link rel="icon" type="image/x-icon" href="assets/logo.webp">
 
     <meta charset="UTF-8" />
@@ -9,20 +9,20 @@
     <meta name="author" content="Matthieu et Théophile">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- <link rel="stylesheet" href="styles/form.css"/>
-    <link rel="stylesheet" href="styles/intro.css"/>   
-    <link rel="stylesheet" href="styles/game.css"/> 
-    <link rel="stylesheet" href="styles/button.css"/>  
-    <link rel="stylesheet" href="styles/footer.css"/> 
-    <link rel="stylesheet" href="styles/main.css"/> 
-    <link rel="stylesheet" href="styles/header.css"/> 
-    <link rel="stylesheet" href="styles/body.css"/> -->
-    <link rel="stylesheet" href="styles/global.css"/>
+    <!-- <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/intro.css">   
+    <link rel="stylesheet" href="styles/game.css"> 
+    <link rel="stylesheet" href="styles/button.css">  
+    <link rel="stylesheet" href="styles/footer.css"> 
+    <link rel="stylesheet" href="styles/main.css"> 
+    <link rel="stylesheet" href="styles/header.css"> 
+    <link rel="stylesheet" href="styles/body.css"> -->
+    <link rel="stylesheet" href="styles/global.css">
 
   </head>
   <body>
-    <header class="header">
-      <h1 class="title" aria-label="On the cruise">On the 
+    <header class="header" role="banner" aria-label="En-tête du site Web">
+      <h1 class="title" aria-label="On the cruise" aria-level="1">On the 
         <br class="return">
          <span class="lettre">c</span>
          <span class="lettre">r</span>
@@ -33,131 +33,131 @@
 
     </header>
 
-    <main>
+    <main role="main">
       
-          <article class="intro">
-            <h2>Prêt pour une petite aventure ?</h2>
-            <p aria-label="Bienvenue"> Bienvenue !</p>
-          <p > Découvrez l'épopée maritime captivante de notre jeu,
-            plongé dans l'univers épique de One Piece.  </p>
+          <article class="intro" aria-label="introduction du site ">
+            <h2 aria-level="2">Prêt pour une petite aventure ?</h2>
+            <p> Bienvenue !</p>
+            <p> Découvrez l'épopée maritime captivante de notre jeu,
+            plongé dans l'univers épique de <abbr title="C'est un manga populaire">One Piece.</abbr>  </p>
             <p>Embarquez pour une aventure palpitante où les Pirates affrontent la Marine dans des combats spectaculaires. Choisissez votre camp avec soin, sélectionnez votre équipage parmi des personnages emblématiques tels que Luffy, Nami, Zoro, Akainu et bien d'autres,
               et engagez-vous dans des batailles stratégiques pour la suprématie sur les océans. 
             </p>
             <p>En garde, moussaillon !</p>
           </article>
 
-      <form action="/submit" method="post">
+      <form action="/submit" method="post" aria-label="Formulaire d'ajout de personnage">
           <h2>Création personnage</h2>
           
-          <label for="pseudo">Votre pseudo :</label>
-          <input type="text" id="pseudo" name="pseudo" required>
+          <label for="pseudo" aria-label="Pseudo du joueur">Votre pseudo :</label>
+          <input type="text" id="pseudo" name="pseudo" aria-label="pseudo" placeholder="Saisissez votre pseudo" required>
   
           <br>
   
-          <label for="arme">Votre arme :</label>
-          <input type="text" id="arme" name="arme" required>
+          <label for="arme" aria-label="choisir son arme" >Votre arme :</label>
+          <input type="text" id="arme" name="arme" aria-label="arme" placeholder="Saisissez votre arme" required>
   
           <br>
 
-          <label for="personnage">Par quel perso voudrais-tu être accompagné :</label>
-          <select id="personnage" name="personnage">
-              <option value="Luffy">Luffy</option>
-              <option value="Nami">Nami</option>
-              <option value="Zoro">Zoro</option>
-              <option value="Garp">Garp</option>
-              <option value="Akainu">Akainu</option>
-              <option value="Smoker">Smoker</option>
+          <label for="personnage" aria-label="choix personnage">Par quel perso voudrais-tu être accompagné :</label>
+          <select id="personnage" name="personnage"  aria-label="sélèctionne ton personnage">
+              <option value="Luffy" aria-label="Luffy">Luffy</option>
+              <option value="Nami" aria-label="Nami">Nami</option>
+              <option value="Zoro" aria-label="Zoro">Zoro</option>
+              <option value="Garp" aria-label="Garp">Garp</option>
+              <option value="Akainu" aria-label="Akainu">Akainu</option>
+              <option value="Smoker" aria-label="Smoker">Smoker</option>
           </select>
   
           <br>
   
-          <h3>Choisis le camp</h3>
-          <div class="camp">
-            <label for="Pirate">Pirate</label>
-            <input type="radio" id="Pirate" name="camp" value="Pirate" checked />
-            <label for="Marine">Marine</label>
-            <input type="radio" id="Marine" name="camp" value="Marine" />
+          <h3 aria-label="choix du camp" aria-level="3">Choisis le camp</h3>
+          <div class="camp" aria-label="conteneur choix camp">
+            <label for="Pirate" aria-label="camp pirate">Pirate</label>
+            <input type="radio" id="Pirate" name="camp" value="Pirate" aria-label="Pirate"checked>
+            <label for="Marine" aria-label="camp Marine">Marine</label>
+            <input type="radio" id="Marine" name="camp" value="Marine" aria-label="Marine">
             
           </div>
   
           <br>
-          <input type="submit" value="Envoyer" class = 'button'>
+          <input type="submit" value="Envoyer" class = 'button' aria-label="Envoyer" title="envoyer le personnage dans l'équipage selectionné">
       </form>
 
-      <section class="game" id="game">
+      <section class="game" id="game" aria-label="espace jeu">
         
-        <div class="cont-equipe">
-          <h2 class="name-equipe">Pirate</h2>
-          <div class="personnages Pirate">
-           
+        <div class="cont-equipe"  aria-label="equipe pirate">
+          <h2 class="name-equipe" aria-level="2">Pirate</h2>
+          <div class="personnages Pirate" >
           </div>
         </div>
 
-        <div class="cont-champ-bataille">
-          <div class="bateau">
-            <picture>
+        <div class="cont-champ-bataille" aria-label="champ de bataille">
+          <div class="bateau" aria-label="bateau pirate">
+            <picture role="img">
               <source srcset="assets/pirate.webp" type="pirate/webp">
               <source srcset="assets/pirate.jpg" type="pirate/jpeg">
-              <img src="assets/pirate.webp" alt="Description de l'image"  class="bateau-img">
+              <img src="assets/pirate.webp" class="bateau-img" alt="image bateau pirate sur la mer">
+              <!-- <figcaption>image bateau pirate sur la mer</figcaption> -->
             </picture>
             
-            <div class="explosion un" id="explosion"></div>
-              <div class="explosion deux" id="explosion"></div>
-              <div class="explosion trois" id="explosion"></div>
-              <div class="explosion quatre" id="explosion"></div>
-              <div class="explosion cinq" id="explosion"></div>
+              <div class="explosion un" aria-label="imgage d'explosion qui apparait et disparait au starts"></div>
+              <div class="explosion deux" aria-label="imgage d'explosion qui apparait et disparait au starts"></div>
+              <div class="explosion trois" aria-label="imgage d'explosion qui apparait et disparait au starts"></div>
+              <div class="explosion quatre" aria-label="imgage d'explosion qui apparait et disparait au starts"></div>
+              <div class="explosion cinq" aria-label="imgage d'explosion qui apparait et disparait au starts"></div>
           </div>
           
             
-            <div class="champ-bataille">
-              <img src="assets/mer.webp" alt="" class="mer-img"></img>
-              <div class="boulet droit un" id="boulet"></div>
-              <div class="boulet droit deux" id="boulet"></div>
-              <div class="boulet droit trois" id="boulet"></div>
+            <div class="champ-bataille"  aria-label="espace de champ de bataille">
+              <img src="assets/mer.webp" alt="image de la mer en paysage" class="mer-img"></img>
+              <div class="boulet droit un" aria-label="image de boulet de canon qui part de droit à gauche au start"></div>
+              <div class="boulet droit deux" aria-label="image de boulet de canon qui part de droit à gauche au start"></div>
+              <div class="boulet droit trois"aria-label="image de boulet de canon qui part de droit à gauche au start"></div>
 
-              <div class="boulet gauche un" id="boulet"></div>
-              <div class="boulet gauche deux" id="boulet"></div>
-              <div class="boulet gauche trois" id="boulet"></div>
+              <div class="boulet gauche un" aria-label="image de boulet de canon qui part de gauche à droite au start"></div>
+              <div class="boulet gauche deux" aria-label="image de boulet de canon qui part de gauche à droite au start"></div>
+              <div class="boulet gauche trois" aria-label="image de boulet de canon qui part de gauche à droite au start"></div>
 
-              <div class="end-game">
+              <div class="end-game" aria-label="espace de fin de jeu">
                 
-                <h3 id="resulat-game">La Marine à gagné</h3>
+                <h3 id="resulat-game"  aria-label="Camp qui à gagné" aria-level="3" >La Marine à gagné</h3>
 
-                <button class="btn-class-name" id="reset">
+                <button class="btn-class-name" id="reset"  aria-label="reset le jeu"  title="Cliquez pour réinitialisé le jeu">
                   <span class="back"></span>
-                  <span class="front"><p>reset</p></span>
+                  <span class="front">reset</span>
                 </button>
               </div>
-              <div class="starts-game">
+              <div class="starts-game" aria-label="espace de lancement du heux">
               
-                <button class="btn-class-name" id="start">
-                  <span class="back"></span>
-                  <span class="front"><p>Start</p></span>
+                <button class="btn-class-name" id="start"  aria-label="lancer le jeux"  title="Cliquez pour lancer le jeu">
+                  <span class="back" ></span>
+                  <span class="front">Start</span>
                 </button>
               </div>
             </div>
 
-            <div class="bateau">
+            <div class="bateau" aria-label="bateau Marine">
 
               <picture>
                 <source srcset="assets/marine.webp" type="marine/webp">
                 <source srcset="assets/marine.jpg" type="marine/jpeg">
-                <img src="assets/marine.webp" alt="Description de l'image"  class="bateau-img">
+                <img src="assets/marine.webp" class="bateau-img"  alt="image bateau de la marine sur la mer">
               </picture>
           
-              <div class="explosion un" id="explosion"></div>
-              <div class="explosion deux" id="explosion"></div>
-              <div class="explosion trois" id="explosion"></div>
-              <div class="explosion quatre" id="explosion"></div>
-              <div class="explosion cinq" id="explosion"></div>
+              <div class="explosion un" aria-label="img explosion"></div>
+              <div class="explosion deux" aria-label="img explosion"></div>
+              <div class="explosion trois" aria-label="img explosion"></div>
+              <div class="explosion quatre" aria-label="img explosion"></div>
+              <div class="explosion cinq" aria-label="img explosion"></div>
 
             </div>
           </div>
         </div>
         
 
-        <div class="cont-equipe">
-          <h2 class="name-equipe">Marine</h2>
+        <div class="cont-equipe"  aria-label="equipe de la Marine">
+          <h2 class="name-equipe" aria-level="2">Marine</h2>
           <div class="personnages Marine">
           
           </div>
@@ -167,7 +167,12 @@
     </main>
 
     <footer>
-      <p>Tous droit reservés</p>
+      <p aria-label="copyright" >&copy; 2023 OnePiece Corporation. Tous droits réservés.</p>
+      <p aria-label="lieu">Wano Kuni Grand line</p>
+      <address>
+        <p aria-label="email1">Email :  <a href="mailto:matthieu@delmont.fr"  title="Envoyer un email">matthieu@delmont.fr</a></p>
+        <p aria-label="email2">Email : <a href="mailto:theophile.sers@gmail.com"  title="Envoyer un email">theophile.sers@gmail.com</a></p>
+      </address>
     </footer>
 
     <script src="script.js"></script>

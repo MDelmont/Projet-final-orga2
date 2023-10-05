@@ -1,62 +1,13 @@
-main form {
+footer {
   background-image: url("../assets/dark-wood.webp");
   background-color: rgb(195, 116, 14);
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.5);
-  max-width: 400px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 5px;
-  padding-right: 50px;
-}
-main form label,
-main form h3,
-main form h2 {
-  color: bisque;
-}
-main form label {
-  display: block;
-  margin-bottom: 8px;
-}
-main form .camp {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-main form select,
-main form input {
-  width: 100%;
+  margin: 0;
   padding: 10px;
-  margin-bottom: 15px;
-}
-main form input[type=radio] {
-  margin-right: 5px;
-}
-main form input[type=submit] {
-  padding: 10px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-main form .button {
-  scale: 0.9;
-  cursor: pointer;
-  position: relative;
-  padding: 10px 24px;
-  font-size: 18px;
   color: bisque;
-  border: 2px solid bisque;
-  border-radius: 34px;
-  background-color: transparent;
-  font-weight: 600;
-  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  overflow: hidden;
-}
-main form .button:hover {
-  color: rgb(105, 72, 2);
-  scale: 1;
-  box-shadow: 0 0px 20px rgb(105, 72, 2);
-  background-color: bisque;
-}
-main form .button:active {
-  scale: 0.9;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 /*# sourceMappingURL=form.css.map */
