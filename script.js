@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-
+// partie formulaire
 
   const form = document.querySelector("form");
   form.addEventListener("submit", (event) => {
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
+// partie game
 
   const start = document.getElementById("start");
   const reset = document.getElementById("reset");
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 5000);
     start.disabled = false;
   });
-  
+
   reset.addEventListener("click", () => {
     reset.disabled = true;
 

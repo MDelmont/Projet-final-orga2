@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <title aria-label="Bataille naval">Bataille naval</title>
     <link rel="icon" type="image/x-icon" href="assets/logo.webp">
@@ -21,6 +21,8 @@
 
   </head>
   <body>
+
+
     <header class="header" role="banner" aria-label="En-tête du site Web">
       <h1 class="title" aria-label="On the cruise" aria-level="1">On the 
         <br class="return">
@@ -32,6 +34,8 @@
          <span class="lettre">e</span></h1>
 
     </header>
+
+
 
     <main role="main">
       
@@ -47,7 +51,7 @@
           </article>
 
       <form action="/submit" method="post" aria-label="Formulaire d'ajout de personnage">
-          <h2>Création personnage</h2>
+          <h2 aria-level="2">Création personnage</h2>
           
           <label for="pseudo" aria-label="Pseudo du joueur">Votre pseudo :</label>
           <input type="text" id="pseudo" name="pseudo" aria-label="pseudo" placeholder="Saisissez votre pseudo" required>
@@ -93,6 +97,7 @@
         </div>
 
         <div class="cont-champ-bataille" aria-label="champ de bataille">
+
           <div class="bateau" aria-label="bateau pirate">
             <picture role="img">
               <source srcset="assets/pirate.webp" type="pirate/webp">
@@ -110,6 +115,7 @@
           
             
             <div class="champ-bataille"  aria-label="espace de champ de bataille">
+
               <img src="assets/mer.webp" alt="image de la mer en paysage" class="mer-img"></img>
               <div class="boulet droit un" aria-label="image de boulet de canon qui part de droit à gauche au start"></div>
               <div class="boulet droit deux" aria-label="image de boulet de canon qui part de droit à gauche au start"></div>
@@ -128,6 +134,7 @@
                   <span class="front">reset</span>
                 </button>
               </div>
+              
               <div class="starts-game" aria-label="espace de lancement du heux">
               
                 <button class="btn-class-name" id="start"  aria-label="lancer le jeux"  title="Cliquez pour lancer le jeu">
@@ -166,13 +173,14 @@
       </section>
     </main>
 
+
     <footer>
       <p aria-label="copyright" >&copy; 2023 OnePiece Corporation. <br>Tous droits réservés.</p>
       
       <p aria-label="lieu">Wano Kuni Grand line</p>
       <address>
-        <p aria-label="email1">Email :  <a href="mailto:matthieu@delmont.fr"  title="Envoyer un email">matthieu@delmont.fr</a></p>
-        <p aria-label="email2">Email : <a href="mailto:theophile.sers@gmail.com"  title="Envoyer un email">theophile.sers@gmail.com</a></p>
+        <p aria-label="email1">Contact :  <a href="mailto:matthieu@delmont.fr"  title="Envoyer un email">matthieu@delmont.fr</a></p>
+    
       </address>
     </footer>
 
