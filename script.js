@@ -23,12 +23,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const picture = document.createElement("picture");
     const img = document.createElement("img");
     const sources1 = document.createElement("source");
-    sources1.srcset = "assets/" + personnage + ".webp";
+    sources1.srcset = "assets/" + personnage.toLowerCase() + ".webp";
     sources1.type = "image/webp";
     const sources2 = document.createElement("source");
-    sources2.srcset = "assets/" + personnage + ".jpg";
+    sources2.srcset = "assets/" + personnage.toLowerCase() + ".jpg";
     sources2.type = "image/jpeg";
-    img.src = "assets/" + personnage + ".jpg";
+    img.src = "assets/" + personnage.toLowerCase() + ".jpg";
     img.alt = personnage;
     picture.appendChild(sources1);
     picture.appendChild(sources2);
